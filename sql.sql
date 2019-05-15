@@ -64,12 +64,12 @@ select * from qlythuvien.docgia;
 update docgia 
 set ten='toan' ,khoa='cong nghe thong tin' ,khoahoc='ct1c'
 where sothe=1;
-
+/* 5.hiển thị tên,khoa của những độc giả và sắp xếp theo khoa */
 select ten ,khoa
 from docgia
 order by khoa asc;
 
-/* 5.hiển thị tên,khoa của những độc giả và sắp xếp theo khoa */
+
 select * from docgia;
 select*from sach;
 select*from phieumuon;
