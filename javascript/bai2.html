@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <style>
+            .error{
+color:red;	
+font-size:20px;
+}
+        </style>
+    </head>
+    <body>
+        
+               <form class="form-horizontal" onsubmit="return error();"    id="form-dk" method="POST">
+  <div class="form-group">
+      <label class="control-label col-sm-2"  for="name">Name:</label>
+      <div class="col-sm-5">
+        <input  type="text" class="form-control" id="name" placeholder="Nhập tên" name="name" >
+            
+    </div>
+     <div class="col-sm-2">
+              <span id="errorName" class="error"></span>
+              </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" id="email" for="name">Email:</label>
+      <div class="col-sm-5">
+        <input  type="text" class="form-control" id="email" placeholder="Nhập tên" name="name" >
+              </div>
+              <div class="col-sm-2">
+              <span id="errorEmail" class="error"></span>
+              </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2" id="website" for="name">Website:</label>
+      <div class="col-sm-5">
+        <input  type="text" class="form-control" id="website" placeholder="Nhập tên" name="name" >
+              </div>
+             <div class="col-sm-2">
+              <span id="errorWebsite" class="error"></span>
+              </div>
+    </div>
+    <div class="form-group">
+      <label class="control-label col-sm-2 " id="mesage" for="name">Message:</label>
+       <div class="col-sm-5"> <textarea rows="4" cols="50" id="message">
+</textarea></div>
+<div class="col-sm-2">
+              <span id="errorMessage" class="error"></span>
+              </div>
+</div>
+    <div class="form-group">        
+      <div >
+        <button style="margin-left:415px;" type="submit"   name="dangKy" class="btn btn-default">Đăng ký</button>
+      </div>
+    </div>
+    </form>
+<script>
+
+function error(){
+	var name=document.getElementById('name').value;
+var email=document.getElementById('email').value;
+var website=document.getElementById('website').value;
+var message=document.getElementById('message').value;
+	if(name==''){
+		document.getElementById('errorName').innerHTML='This field is required';
+		return false;
+	}
+	else{
+		document.getElementById('errorName').innerHTML='';
+		
+	}
+	if(email==''){
+		document.getElementById('errorEmail').innerHTML='This field is required';
+		return false;
+	}
+	else{
+		document.getElementById('errorEmail').innerHTML='';
+		
+	}
+	if(website==''){
+		document.getElementById('errorWebsite').innerHTML='This field is required';
+		return false;
+	}
+	else{
+		document.getElementById('errorWebsite').innerHTML='';
+		
+	}
+	if(mesage==''){
+		document.getElementById('mesage').innerHTML='This field is required';
+		return false;
+	}
+	else{
+		document.getElementById('mesage').innerHTML='';
+		
+	}
+}
+</script>
+    </body>
+</html>
