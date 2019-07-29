@@ -17,8 +17,8 @@ import java.sql.SQLException;
 public class Connec {
     public Connection getConnect() throws ClassNotFoundException, SQLException{
         Class.forName("com.mysql.cj.jdbc.Driver");
-        String connStr="jdbc:mysql://localhost:3306/test";
-        Connection conn = DriverManager.getConnection(connStr,"root","anhtoan");
+        String connStr="jdbc:mysql://localhost:3306/sanpham";
+        Connection conn = DriverManager.getConnection(connStr,"root","Toan0167");
         
         return conn;
     }

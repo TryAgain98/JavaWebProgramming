@@ -58,7 +58,8 @@ public class questionManager {
             q.setCorrect(rs.getString("correct"));
             return q;
         }
-        
+        question q=new question();
+        return q;
     }
     
     public void addAnswer(Student s, question q,String answer) throws SQLException{
